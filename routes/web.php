@@ -1,8 +1,8 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
-
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\PostaddController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +22,9 @@ use App\Http\Controllers\HomeController;
 
 // welcome route for home page
 Route::get('/', [HomeController::class, 'index']);
+
+Route::get('/signup', [RegisterController::class, 'index']);
+
+
+
+Route::get('/post-ad', [PostaddController::class, 'index'])->name('post-add');
